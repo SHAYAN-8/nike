@@ -1,0 +1,796 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* SCROLL BAR CSS */
+
+body::-webkit-scrollbar {
+  width: 0.9rem;
+  background-color: whitesmoke;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100);
+  border-radius: 30px;
+  border: 3px solid white;
+}
+
+/* PLACE HOLDER CSS */
+
+#place-item {
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: -webkit-fill-available;
+  margin: 2px 5vw;
+  margin-top: 8vh;
+}
+
+.disabled {
+  width: 120px;
+  margin-top: 20px;
+  height: 45px;
+}
+
+#carouselExampleAutoplaying {
+  display: none;
+}
+
+#content {
+  display: none;
+}
+
+/* =============================================== */
+/* NAVBAR CSS */
+/* =============================================== */
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 9;
+}
+
+#navbar::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* LOGO CSS */
+
+#logo {
+  width: 80px;
+  height: 50px;
+}
+
+/* NAVBAR LINKS CSS */
+
+.nav_item2 {
+  font-family: "Roboto";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40vw;
+}
+
+.nav_links {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 8px 0.5vw;
+  border-bottom: 2px solid transparent;
+  color: rgb(65, 65, 65);
+  cursor: pointer;
+}
+
+.nav_links:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.dropbtn {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  margin-top: 11px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.068);
+  z-index: 9;
+  background-color: white;
+}
+
+.dropdown-content a {
+  color: black;
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7f7f7;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* SEARCH BAR CSS */
+
+#search_bar {
+  width: 20vw;
+  height: 30px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  padding-right: 0px;
+
+  text-indent: 10px;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  transition: width 0.5s ease-in-out;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search_bar:focus {
+  width: 30vw;
+}
+
+#search_btn {
+  font-size: 1.4rem;
+  color: black;
+  margin-left: -45px;
+  cursor: pointer;
+  z-index: 2;
+  background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0.514),
+      white,
+      white,
+      white);
+
+  padding-left: 20px;
+}
+
+/* ADD TO CARD BTN */
+
+.add_to_cart {
+  font-size: 1.3rem;
+  padding: 2px 7px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.add_to_cart:hover {
+  background-color: #333;
+}
+
+.add_to_cart a {
+  color: black;
+}
+
+.add_to_cart a:hover {
+  color:whitesmoke;
+}
+
+/* TOGGLE BUTTON  */
+
+#nav_item4 {
+  display: none;
+}
+
+.menu {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 7px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -10px) rotate(45deg);
+}
+
+/* NAVBAR RESPONSIVE MEDIA QUERIES */
+
+@media screen and (max-width: 700px) {
+  #logo {
+    width: 75px;
+    height: 45px;
+  }
+
+  .nav_item2 {
+    order: 3;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 72vw;
+    margin-left: 28vw;
+    margin-top: 92vh;
+    background-color: rgba(255, 255, 255, 0.877);
+    transition: transform 0.5s linear;
+    transform: translateX(72vw);
+    z-index: 8;
+  }
+
+  .nav_links {
+    margin: 10px 0px;
+  }
+
+  .toggle {
+    transform: translateX(0vw);
+    transition: transform 0.5s linear;
+  }
+
+  #search_bar {
+    width: 50vw;
+  }
+
+  #search_bar:focus {
+    width: 60vw;
+  }
+
+  #nav_item4 {
+    display: inline-block;
+    z-index: 9;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #navbar {
+    height: 55px;
+  }
+
+  #logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .nav_item2 {
+    width: 100vw;
+    margin-left: 0vw;
+    transform: translateX(100vw);
+  }
+
+  .toggle {
+    transform: translateX(0vw);
+  }
+
+  #search_bar {
+    width: 60vw;
+    margin-left: -20px;
+  }
+
+  #search_btn {
+    font-size: 1.3rem;
+    margin-left: -43px;
+  }
+.add_to_cart {
+  transform: scale(0.9);
+}
+  .bar {
+    width: 25px;
+    height: 2px;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+  }
+
+  .change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+  }
+}
+
+/* ====================================== */
+/* SLIDER CSS */
+/* ====================================== */
+
+.w-100 {
+  height: 70vh;
+  margin-top: 9vh;
+}
+
+.carousel {
+  width: 100vw;
+}
+
+/* SLIDER RESPONSIVE MEDIA QUERIES */
+
+@media screen and (max-width: 700px) {
+  .w-100 {
+    height: 57vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .w-100 {
+    height: 48vh;
+    margin-top: 10vh;
+  }
+}
+
+/* ====================================== */
+/* HERO SECTION CSS */
+/* ====================================== */
+
+#hero {
+  margin: 40px 4vw;
+}
+
+h1 {
+  font-family: "Russo One", sans-serif;
+}
+
+.para_1 {
+  font-family: "Roboto", sans-serif;
+  color: gray;
+}
+
+/* CARD FLEXBOX CSS  */
+
+.card_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* CARD CSS */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  height: 450px;
+  padding-bottom: 20px;
+  margin: 20px 2px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover,
+.card:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* CARD IMAGE CSS */
+
+.card-img {
+  background-color: aliceblue;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img:hover img {
+  transform: scale(1);
+}
+
+/* CARD CONTENT CSS */
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* CARD PRICE CSS */
+
+.price {
+  margin-top: -30px;
+  margin-left: 10px;
+  z-index: 0;
+  width: 80px;
+}
+
+.price:hover {
+  color: green;
+}
+
+sale {
+  color: turquoise;
+  font-family: cursive;
+  font-variant: small-caps;
+}
+
+mark {
+  color: red;
+  font-weight: 500;
+}
+
+.card-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 10px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card-text {
+  text-align: left;
+  margin: 10px 15px;
+  font-size: 17px;
+  color: gray;
+}
+
+/* CARD BUTTON CSS */
+
+.card-btn {
+  margin: 10px 0px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: black;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  background-color: #333;
+  color: #fff;
+}
+
+/* CARD RESPONSIVE MEDIA QUERIES */
+
+@media screen and (max-width: 1800px) {
+  .card {
+    width: 390px;
+  }
+}
+
+@media screen and (max-width: 1292px) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .card_flex {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 1052px) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 788px) {
+  .card {
+    width: 310px;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .card {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 100vw;
+  }
+}
+
+/* ========================================= */
+/* ABOUT SECTION CSS */
+/* ========================================= */
+#about {
+  margin: 10px 6vw;
+}
+
+.para_2 {
+  display: inline;
+  margin: 20px 0px;
+  margin-bottom: 0px;
+  color: rgb(27, 27, 27);
+}
+
+/* SHOW MORE AND LESS TOGGLE CLASS */
+
+.text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* SHOW MORE AND LESS BUTTON CSS */
+
+.more {
+  color: #0059ff;
+  font-weight: bold;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  display: inline;
+  border: none;
+}
+
+/* ====================================== */
+/* SERVICES SECTION CSS */
+/* ====================================== */
+#services {
+  margin: 10px 6vw;
+}
+
+.servives_flex {
+  width: 88vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services_box {
+  padding: 2vh 2vw;
+  border: 1px solid silver;
+  border-radius: 3px;
+  width: 28.5vw;
+  height: auto;
+  overflow: hidden;
+}
+
+.icon {
+  margin-top: -10px;
+  font-size: 6rem;
+  color: #333;
+}
+
+.fa-handshake-o {
+  color: darkblue;
+}
+
+.fa-map-marker {
+  color: crimson;
+}
+
+.fa-money {
+  color: darkgreen;
+}
+
+.services_heading {
+  font-family: "Roboto";
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* SERVIVES RESPONSIVE MEDIA QUESRIES */
+
+@media screen and (max-width: 900px) {
+  .servives_flex {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .services_box {
+    padding: 2vh 4vw;
+    width: 90%;
+    margin: 10px 0px;
+  }
+
+  .services_heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .services_box {
+    text-align: center;
+    padding: 0vh 4vw;
+  }
+
+  .services_heading {
+    font-size: 1.2rem;
+  }
+}
+
+/* ====================================== */
+/* CONTACT SECTION CSS */
+/* ====================================== */
+#contact {
+  background-color: aliceblue;
+  padding: 10px 6vw;
+}
+
+.contact_flex {
+  width: 100%;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.contact_list {
+  padding-left: 0rem;
+}
+
+.contact_list li {
+  list-style: none;
+  /* color: gray; */
+  margin: 10px 0px;
+}
+
+.contact_list li b {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  font-weight: 500;
+}
+
+.links {
+  color: gray;
+
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.links:hover {
+  color: deepskyblue;
+}
+
+/* MAP CSS */
+
+#map {
+  height: 40vh;
+  width: 90vw;
+}
+
+/* PAYMENT ICON CSS */
+
+.payment {
+  color: darkblue;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: end;
+}
+
+/* COPY RIGHT */
+
+.copy-right {
+  background-color: black;
+  justify-content: center;
+  color: white;
+  display: flex;
+}
+
+/* CONTACT RESPONSIVE MEDIA QUERIES */
+
+@media screen and (max-width: 700px) {
+  .contact_list li b {
+    font-size: 1.1rem;
+  }
+
+  .links {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact_flex {
+    flex-wrap: wrap;
+  }
+
+  .contact_list {
+    padding: 0px 2vw;
+  }
+
+  .contact_list li b {
+    font-size: 1.2rem;
+  }
+
+  .links {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contact_flex {
+    justify-content: center;
+  }
+
+  .contact_list {
+    padding: 10px 8vw;
+    text-align: center;
+  }
+
+  .contact_list li {
+    margin: 2px 0px;
+  }
+
+  .payment {
+    text-align: center;
+  }
+
+  .copy-right {
+    word-spacing: -3px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore our online shoe store for the latest Nike Air Max, Air Jordan, Air Force, and more.
+       Find the perfect pair of Nike shoes that combine style and performance.
+        Shop now to step up your game with the iconic designs and unmatched quality of Nike footwear" />
+  <meta name="author" content="Muaz and Shayan" />
+  <!-- STYLE SHEET -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- FONT STYLE SHEET -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Russo+One&display=swap"
+    rel="stylesheet" />
+  <!-- BOOTSTRAP STYLE SHEET -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <!-- ICON STYLE SHEET -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Nike</title>
+  <!-- TITLE ICON -->
+  <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-512/free-nike-3-202655.png?f=avif&w=256"
+    type="image/x-icon" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+
+  <nav id="navbar">
+    <div class="nav_items" id="nav_item1">
+      <a href="https://www.nike.com/">
+        <img src="images/logo.png" alt="logo" id="logo" />
+      </a>
+    </div>
+    <div class="nav_items nav_item2" id="nav_item2">
+      <a href="#" class="nav_links">Home</a>
+
+      <div class="dropdown nav_links">
+        <a href="#hero" class="dropbtn">Collection</a>
+        <div class="dropdown-content">
+          <a href="#airforce">Air force</a>
+          <a href="#airmax">Air max</a>
+          <a href="#airjordan">Air Jordan</a>
+        </div>
+      </div>
+
+      <a href="#about" class="nav_links">About</a>
+      <a href="#services" class="nav_links">Services</a>
+      <a href="#contact" class="nav_links">Contact</a>
+    </div>
+    <div class="nav_items" id="nav_item3">
+      <input type="search" id="search_bar" placeholder="Search..." />
+      <a href="#" id="search_btn"><i class="fa fa-search"></i></a>
+    </div>
+     <div class="add_to_cart"> <a href="#">
+       <i class="fa fa-shopping-bag"></i></a>
+       </div>
+    <div class="nav_items" id="nav_item4" onclick="nav_toggle()">
+      <div class="menu" onclick="myFunction(this)">
+        <div class="bar1 bar"></div>
+        <div class="bar2 bar"></div>
+        <div class="bar3 bar"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.dribbble.com/users/6290720/screenshots/14496104/nike_shoe_ad.jpg" class="d-block w-100"
+          alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src=" https://cdn.paisawapas.com/blog/wp-content/uploads/2021/10/Nike-Promo-Code.jpg" class="d-block w-100"
+          alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.grabon.in/gograbon/images/merchant/1662021162670.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1549365114930/nike-coupons.jpg"
+          class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="https://rematch.net/wp-content/uploads/2019/04/NIKE-25-OFF.png" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- PLACE HOLDERS -->
+
+  <span id="place-item">
+    <div class="card" aria-hidden="true">
+      <div class="card-body placeholder-glow">
+        <div class="placeholder col-9" style="width: 100%; height: 250px; border-radius: 5px"></div>
+        <h5 class="card-title placeholder-glow">
+          <h3 class="card-title text-center">Air Force</h3>
+        </h5>
+
+        <p class="card-text placeholder-glow text-center">
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <!-- <span class="placeholder col-8"></span> -->
+          <br />
+          <a class="btn btn-secondary disabled"></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card" aria-hidden="true">
+      <div class="card-body placeholder-glow">
+        <div class="placeholder col-9" style="width: 100%; height: 250px; border-radius: 5px"></div>
+
+        <h5 class="card-title placeholder-glow">
+          <h3 class="card-title text-center">Air Max</h3>
+        </h5>
+        <p class="card-text placeholder-glow text-center">
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <!-- <span class="placeholder col-8"></span> -->
+          <br />
+          <a class="btn btn-secondary disabled"></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card" aria-hidden="true">
+      <div class="card-body placeholder-glow">
+        <div class="placeholder col-9" style="width: 100%; height: 250px; border-radius: 5px"></div>
+
+        <h5 class="card-title placeholder-glow text-center">
+          <h3 class="card-title text-center">Air Jordan</h3>
+        </h5>
+        <p class="card-text placeholder-glow text-center"">
+          <span class=" placeholder col-7">
+  </span>
+  <span class="placeholder col-4"></span>
+  <span class="placeholder col-4"></span>
+  <span class="placeholder col-6"></span>
+  <!-- <span class="placeholder col-8"></span> -->
+  <br />
+
+  <a class="btn btn-secondary disabled"></a>
+  </div>
+  </div>
+  </span>
+  <div class="d-flex justify-content-center">
+    <div id="spin" style="width: 3rem; height: 3rem" class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+
+  <main id="content">
+    <!-- HERO SECTION -->
+
+    <section id="hero">
+      <h1>MEN'S SHOES</h1>
+      <p class="para_1">
+        Step out in style with our collection of men's shoes. Whether you're
+        heading to the office, hitting the gym, or going out for a night on
+        the town, we've got you covered. Our range features a variety of
+        designs, from classic dress shoes to comfortable sneakers. Elevate
+        your footwear game and step into confidence with our men's shoes.
+      </p>
+      <hr />
+      <br />
+
+      <!-- AIR FORCE SHOES SECTION -->
+
+      <section id="airforce">
+        <br />
+        <h1>AIR FORCE</h1>
+        <br />
+        <div class="card_flex">
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air force/blue.png" alt="Card Image" />
+            </div>
+            <p class="price"><s>210$</s> 190$</p>
+            <div class="card-content">
+              <h3 class="card-title">blue shoes</h3>
+              <p class="card-text">
+                Blue Air Force shoes: A cool and classic footwear choice.
+                <sale>Sale</sale>
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air force/pink.png" alt="Card Image" />
+            </div>
+            <p class="price">240$</p>
+            <div class="card-content">
+              <h3 class="card-title">pink shoes</h3>
+              <p class="card-text">
+                Pink Air Force shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air force/green.png" alt="Card Image" />
+            </div>
+            <p class="price">180$</p>
+            <div class="card-content">
+              <h3 class="card-title">green shoes</h3>
+              <p class="card-text">
+                Green Air Force shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air force/orange.png" alt="Card Image" />
+            </div>
+            <p class="price">202$</p>
+            <div class="card-content">
+              <h3 class="card-title">orange shoes</h3>
+              <p class="card-text">
+                Orange Air Force shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air force/purple.png" alt="Card Image" />
+            </div>
+            <p class="price">220$</p>
+            <div class="card-content">
+              <h3 class="card-title">purple shoes</h3>
+              <p class="card-text">
+                Purple Air Force shoes: A cool and classic footwear choice.
+                <mark>Top rated</mark>
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air force/yellow.png" alt="Card Image" />
+            </div>
+            <p class="price">210$</p>
+            <div class="card-content">
+              <h3 class="card-title">yellow shoes</h3>
+              <p class="card-text">
+                Yellow Air Force shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <!-- AIR MAX SHOES SECTION -->
+      <section id="airmax">
+        <br />
+        <br />
+
+        <h1>AIR MAX</h1>
+        <br />
+        <div class="card_flex">
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air max/blue.png" alt="Card Image" />
+            </div>
+            <p class="price">190$</p>
+            <div class="card-content">
+              <h3 class="card-title">blue shoes</h3>
+              <p class="card-text">
+                Blue Air Max shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air max/pink.png" alt="Card Image" />
+            </div>
+            <p class="price"><s>250$</s> 220$</p>
+            <div class="card-content">
+              <h3 class="card-title">pink shoes</h3>
+              <p class="card-text">
+                Pink Air Max shoes: A cool and classic footwear choice.
+                <sale>Sale</sale>
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air max/green.png" alt="Card Image" />
+            </div>
+            <p class="price">180$</p>
+            <div class="card-content">
+              <h3 class="card-title">green shoes</h3>
+              <p class="card-text">
+                Green Air Max shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air max/red.png" alt="Card Image" />
+            </div>
+            <p class="price">202$</p>
+            <div class="card-content">
+              <h3 class="card-title">red shoes</h3>
+              <p class="card-text">
+                Red Air Max shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air max/purple.png" alt="Card Image" />
+            </div>
+            <p class="price">220$</p>
+            <div class="card-content">
+              <h3 class="card-title">purple shoes</h3>
+              <p class="card-text">
+                Purple Air Max shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="air max/teal.png" alt="Card Image" />
+            </div>
+            <p class="price">210$</p>
+            <div class="card-content">
+              <h3 class="card-title">Teal shoes</h3>
+              <p class="card-text">
+                Teal Air Max shoes: A cool and classic footwear choice.
+                <code>Limited</code>
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+
+      <!-- AIR JORDAN SHOES SECTION -->
+
+      <section id="airjordan">
+        <br />
+        <h1>AIR JORDAN</h1>
+        <br />
+        <div class="card_flex">
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="jordan/blue.png" alt="Card Image" />
+            </div>
+            <p class="price">190$</p>
+            <div class="card-content">
+              <h3 class="card-title">blue shoes</h3>
+              <p class="card-text">
+                Blue Air Jordan shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="jordan/pink.png" alt="Card Image" />
+            </div>
+            <p class="price">240$</p>
+            <div class="card-content">
+              <h3 class="card-title">pink shoes</h3>
+              <p class="card-text">
+                Pink Air Jordan shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="jordan/green.png" alt="Card Image" />
+            </div>
+            <p class="price"><s>220$</s> 180$</p>
+            <div class="card-content">
+              <h3 class="card-title">green shoes</h3>
+              <p class="card-text">
+                Green Air Jordan shoes: A cool and classic footwear choice.
+                <sale>Sale</sale>
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="jordan/red.png" alt="Card Image" />
+            </div>
+            <p class="price">202$</p>
+            <div class="card-content">
+              <h3 class="card-title">red shoes</h3>
+              <p class="card-text">
+                red Air Jordan shoes: A cool and classic footwear choice.
+                <mark>Top rated</mark>
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="jordan/purple.png" alt="Card Image" />
+            </div>
+            <p class="price">220$</p>
+            <div class="card-content">
+              <h3 class="card-title">purple shoes</h3>
+              <p class="card-text">
+                Purple Air Jordan shoes: A cool and classic footwear choice.
+              </p>
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img loading="lazy" src="jordan/golden.png" alt="Card Image" />
+            </div>
+            <p class="price">210$</p>
+            <div class="card-content">
+              <h3 class="card-title">golden shoes</h3>
+              <p class="card-text">
+                Golden Air Jordan shoes: A cool and classic footwear choice.
+                <code>Limited</code>
+              </p>
+
+              <a href="#"> <button class="card-btn">BUY NOW</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <hr />
+    </section>
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about">
+      <br />
+      <h1>NIKE</h1>
+      <p class="para_2 text" id="text">
+        Nike shoes have become a symbol of excellence and innovation in the
+        world of footwear. Known for their exceptional quality, cutting-edge
+        designs, and unmatched performance, Nike continuously pushes
+        boundaries and sets new standards. Whether it's the revolutionary
+        cushioning technology of the Air Max line, the iconic and culturally
+        significant Air Jordan sneakers, or the versatile and timeless Air
+        Force collection, Nike offers a diverse range of products to cater to
+        athletes, sports enthusiasts, and fashion-conscious individuals. With
+        a strong emphasis on technological advancements, Nike integrates
+        state-of-the-art features into their shoes, providing superior
+        comfort, support, and performance. Beyond functionality, Nike shoes
+        are also renowned for their style, collaborating with renowned
+        athletes, designers, and cultural icons to create captivating and
+        trend-setting designs that transcend the realm of sports.
+        Additionally, Nike is committed to sustainability, actively
+        incorporating eco-friendly materials and production processes into
+        their footwear to reduce environmental impact. Nike's dedication to
+        excellence, innovation, and style has solidified its position as a
+        global leader in the footwear industry, inspiring athletes and
+        consumers worldwide to reach their full potential and express their
+        individuality through their choice of footwear.
+      </p>
+      <button onclick="more()" id="more" class="more">Show more</button>
+      <br /><br />
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item" style="border: none">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne" style="
+                  background-color: transparent;
+                  box-shadow: transparent 0px 0px;
+                  font-family: roboto;
+                  font-weight: bold;
+                  font-size: 1.2rem;
+                  color: black;
+                ">
+              How to clean the shoes?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              To keep your Nike shoes looking their best, follow these simple
+              cleaning steps. First, remove any loose dirt or debris using a
+              soft brush. Next, mix a mild detergent with warm water and
+              gently scrub the shoe's surface. Rinse thoroughly and let them
+              air dry. Avoid using bleach or harsh chemicals, and remember to
+              remove the laces for a thorough clean.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="border: none">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="
+                  background-color: transparent;
+                  box-shadow: transparent 0px 0px;
+                  font-family: roboto;
+                  font-weight: bold;
+                  font-size: 1.2rem;
+                  color: black;
+                ">
+              How to prevent chafting?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              To prevent chafing while wearing Nike shoes, consider these
+              tips. Firstly, make sure you have the right shoe size and fit to
+              avoid unnecessary friction. Secondly, wear moisture-wicking
+              socks to keep your feet dry. Lastly, apply a thin layer of
+              petroleum jelly or an anti-chafing balm to areas prone to
+              friction, such as the heels or sides of the feet.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="border: none">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="
+                  background-color: transparent;
+                  box-shadow: transparent 0px 0px;
+                  font-family: roboto;
+                  font-weight: bold;
+                  font-size: 1.2rem;
+                  color: black;
+                ">
+              How to lace your shoes?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Lacing your Nike shoes properly ensures a comfortable and secure
+              fit. Start by inserting the shoelaces through the bottom
+              eyelets, making sure they are of equal length. Cross the laces
+              over and thread them through the next set of eyelets, repeating
+              until you reach the top. Finally, tie a secure knot and adjust
+              for desired tightness.
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+    </section>
+    <br />
+
+    <!-- SERVICES SECTION -->
+
+    <section id="services">
+      <h1>SERVICES</h1>
+      <p class="para_1">
+        Nike shoes offer a range of exceptional services to enhance the
+        customer experience. They provide personalized fitting consultations
+        to ensure the perfect fit and comfort. With their comprehensive
+        services, Nike goes beyond footwear, establishing a lasting connection
+        with their customers.
+      </p>
+      <div class="servives_flex">
+        <div class="services_box">
+          <div class="icon">
+            <i class="fa fa-handshake-o"> </i>
+          </div>
+          <h2 class="services_heading">Customer Services</h2>
+          <p class="para_1">
+            Nike shoes offer exceptional customer service, quick responses,
+            personalized recommendations,dedicated support committed to
+            customer satisfaction.
+          </p>
+        </div>
+        <div class="services_box">
+          <div class="icon">
+            <i class="fa fa-map-marker"> </i>
+          </div>
+          <h2 class="services_heading">Delivery Services</h2>
+          <p class="para_1">
+            Nike shoes ensure swift and reliable delivery services, with
+            efficient tracking systems, on-time deliveries, and hassle-free
+            returns. Customer satisfaction guaranteed.
+          </p>
+        </div>
+        <div class="services_box">
+          <div class="icon">
+            <i class="fa fa-money"> </i>
+          </div>
+          <h2 class="services_heading">Refund Services</h2>
+          <p class="para_1">
+            Nike offers hassle-free refund services for their customers.
+            Simply return within the specified time frame for a full refund or
+            exchange. Satisfaction guaranteed.
+          </p>
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact">
+      <br />
+      <br />
+      <h1>CONTACT</h1>
+      <div class="contact_flex">
+        <ul class="contact_list">
+          <li><b>Nike</b></li>
+          <li>
+            <a href="" class="links"><i class="fa fa-map-marker"></i> 123 Anytown, USA
+            </a>
+          </li>
+          <li>
+            <a href="" class="links"><i class="fa fa-phone" style="color: seagreen"></i>
+              555-555-5555
+            </a>
+          </li>
+          <li>
+            <a href="" class="links"><i class="fa fa-envelope-o" style="color: goldenrod"></i>
+              info@Nike.com
+            </a>
+          </li>
+          <li><a href="#" class="links"></a></li>
+        </ul>
+        <ul class="contact_list">
+          <li><b>Information</b></li>
+          <li><a href="#about" class="links">About Us</a></li>
+          <li><a href="#contact" class="links">Contact Us</a></li>
+          <li><a href="" class="links"> Payment</a></li>
+          <li><a href="" class="links">Privacy Policy</a></li>
+        </ul>
+        <ul class="contact_list">
+          <li><b>Contacts</b></li>
+          <li>
+            <a href="https://www.facebook.com/nike/" class="links"><i class="fa fa-facebook-square"
+                style="color: #006fa2"></i>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="" class="links"><i class="fa fa-whatsapp" style="color: green"></i>
+              Whatsapp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/nike/" class="links"><i class="fa fa-instagram"
+                style="color: #ff00a0"></i>
+              Instagram
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/Nike" class="links">
+              <i class="fa fa-twitter-square" style="color: #00acee"></i>
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="payment">
+        <i class="fa fa-cc-visa"></i>
+        <i class="fa fa-cc-mastercard"></i>
+        <i class="fa fa-cc-paypal"></i>
+        <i class="fa fa-paypal"></i>
+      </div>
+      <big><b>LOCAION</b></big>
+      <iframe id="map"
+        src="https://www.google.com/maps/embed?pb=!4m10!1m2!2m1!1ssm+public+schoo+gole+market+campus+3!3m6!1s0x3eb33fbfac259659:0xccc638d5c34f1a52!8m2!3d24.913877!4d67.0252639!15sCiRzbSBwdWJsaWMgc2Nob28gZ29sZSBtYXJrZXQgY2FtcHVzIDOSAQZzY2hvb2zgAQA!16s%2Fg%2F11c6f5878h?entry=ttu"
+        frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+    <code class="copy-right">Copyright © 2023 Nike all rights reserved.</code>
+  </main>
+</body>
+<!-- SCRIPT SRC -->
+<script src="script.js"></script>
+<!-- BOOTSTRAP SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</html>
